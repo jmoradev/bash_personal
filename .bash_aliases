@@ -1,9 +1,14 @@
+# variables necesarioas
+export BASHPERSONAL=~/bash_personal/.bash_aliases
+
 # actualizacion
-alias cpbpba='sudo cp $1 ~/.bash_aliases'
+alias cpbpba='sh -c "cp $BASHPERSONAL ~/.bash_aliases"'
 alias fsb='source ~/.bashrc'
 
 # atajos
 alias ll='ls -laF'
+alias cba='cat ~/.bash_aliases'
+alias cbp='cat $BASHPERSONAL'
 
 # utilidades
 alias cc='sudo sync; echo 3 > /proc/sys/vm/drop_caches'
@@ -14,15 +19,3 @@ alias update='sudo -- sh -c "apt update && apt upgrade"'
 
 # rescritura
 alias grep='grep --color=auto'
-
-
-
-
-
-
-
-
-
-
-
-
