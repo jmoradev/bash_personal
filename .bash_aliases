@@ -17,6 +17,7 @@ alias gcm='git commit -m"cambios agregados desde el servidor"'
 alias gph='git push'
 alias gpl='sudo git pull'
 alias gacp='ga && gcm && gph'
+alias gc='sudo git clone $1'
 
 # utilidades
 alias cc='sudo sync; echo 3 > /proc/sys/vm/drop_caches'
