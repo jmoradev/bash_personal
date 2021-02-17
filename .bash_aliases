@@ -13,3 +13,5 @@ alias srmc='sudo rm -rfv var/cache/*'
 alias dfh='df -h /'
 
 alias workdesk='tmux a -t $1'
+
+alias cpbpba='sudo cp $1 ~/.bash_aliases'
