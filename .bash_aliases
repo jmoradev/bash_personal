@@ -10,14 +10,19 @@ alias ll='ls -laF'
 alias cba='cat ~/.bash_aliases'
 alias cbp='cat $BASHPERSONAL'
 alias cpbu='cpbpba && fsb'
+alias algp='alias | grep $1'
+
+# atajos git
 alias gl='git log'
-alias gll='git log oneline'
+alias gll='git log --pretty=oneline'
 alias ga='git add -A'
 alias gcm='git commit -m"cambios agregados desde el servidor"'
 alias gph='git push'
 alias gpl='sudo git pull'
 alias gacp='ga && gcm && gph'
 alias gc='sudo git clone $1'
+alias gst='git status'
+alias gg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
 # utilidades
 alias cc='sudo sync; echo 3 > /proc/sys/vm/drop_caches'
