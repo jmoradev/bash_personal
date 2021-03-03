@@ -1,0 +1,32 @@
+tmux new-session \; \
+        rename-session 'monitor' \; \
+        rename-window 'graphical' \; \
+        send-keys 'htop' C-m \; \
+        split-window -h \; \
+        send-keys "watch -n 10 'w | grep -v jmora'" C-m \; \
+        split-window -v -p 90 \; \
+        send-keys "watch -n 60 'df -h /'" C-m \; \
+        split-window -v -p 85 \; \
+        send-keys "watch -n 600 'sudo lsof -i -P -n | grep LISTEN'" C-m \; \
+        split-window -v -p 70 \; \
+        send-keys "watch -n 600 'sudo lsof -i -P -n |grep -v $IPINSTANCE | grep ESTABLISHED | sort -k 9'" C-m \; \
+        split-window -v \; \
+        send-keys "watch -n 600 'sudo lsof -i -P -n |grep $IPINSTANCE | sort -nr -k 9'" C-m \; \
+        \
+        new-window \; \
+        rename-window 'log-pm' \; \
+        send-keys 'watch -n 10 "sudo pm2 ls"' C-m \; \
+        split-window -h -p 40 \; \
+        send-keys 'ls -lah' C-m \; \
+        select-pane -t 1 \; \
+        split-window -v -p 85 \; \
+        send-keys 'sudo pm2 log 0' C-m \; \
+        split-window -v -p 50 \; \
+        send-keys 'sudo pm2 log 1' C-m \; \
+        \
+        new-window \; \
+        rename-window 'desk' \;\
+        send-keys 'sudo systemctl status apache2' C-m \; \
+        send-keys 'sudo systemctl status mysql' C-m \; \
+        send-keys 'sudo systemctl status mariadb' C-m \; \
+        select-window -t 'graphical'
