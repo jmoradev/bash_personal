@@ -7,6 +7,7 @@ alias fsb='source ~/.bashrc'
 
 # atajos
 alias ll='ls -laF'
+alias lh='ls -lah'
 alias cba='cat ~/.bash_aliases'
 alias cbp='cat $BASHPERSONAL'
 alias cpbu='cpbpba && fsb'
