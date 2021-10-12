@@ -1,3 +1,5 @@
+export IPINSTANCE=ip_instancia_servidor
+
 tmux new-session \; \
         rename-session 'monitor' \; \
         rename-window 'graphical' \; \
