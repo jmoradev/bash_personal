@@ -16,6 +16,7 @@ alias cba='cat ~/.bash_aliases'
 alias cbp='cat $BASHPERSONAL'
 alias cpbu='cpbpba && fsb'
 alias algp='alias | grep $1'
+alias llgp='ll | grep $1'
 
 # atajos git
 alias gl='git log'
