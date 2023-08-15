@@ -47,3 +47,4 @@ alias mrestart='sudo systemctl restart mongod'
 alias mstatus='sudo systemctl status mongod'
 
 alias desk="tmux new-session\; rename-session 'desk'\; rename-window 'monitor'\; send-keys 'bpytop' C-m\; new-window\; rename-window 'work'"
+alias monitor="tmux new-session\; rename-session 'monitor'\; send-keys 'bpytop' C-m\; split-window -v -p 10\; send-keys 'sudo su' C-m\; send-keys 'password' C-m\;"
