@@ -48,3 +48,5 @@ alias mstatus='sudo systemctl status mongod'
 
 alias desk="tmux new-session\; rename-session 'desk'\; rename-window 'monitor'\; send-keys 'bpytop' C-m\; new-window\; rename-window 'work'"
 alias monitor="tmux new-session\; rename-session 'monitor'\; send-keys 'bpytop' C-m\; split-window -v -p 10\; send-keys 'sudo su' C-m\; send-keys 'password' C-m\;"
+alias restart-wg='sudo wg-quick down wg0 && for i in 4 3 2 1; do echo "Esperando $i..."; sleep 1; done; sudo wg-quick up wg0'
+
