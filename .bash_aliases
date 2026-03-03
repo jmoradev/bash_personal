@@ -36,6 +36,7 @@ alias srmc='sudo rm -rfv var/cache/*'
 alias dfh='df -h /'
 alias workdesk='tmux a -t $1'
 alias update='sudo -- sh -c "apt update && apt upgrade"'
+alias systat='systemctl status $1'
 
 # rescritura
 alias grep='grep --color=auto'
